@@ -2,11 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import CurrencyTable from './CurrencyTable';
-import useCurrencyTable, { IUseCurrencyTableProp } from './hooks/useCurrencyTable';
+import CurrencyTable from './currency/currencyTable';
+import useCurrencyTable, { IUseCurrencyTableProp } from './currency/useCurrencyTable';
 import { connect } from 'react-redux';
 import { RootState } from './app/store';
-import { getCurrency } from './repositories/currencyThunk';
+import { getCurrency } from './currency/currencyThunk';
 import { bindActionCreators, Dispatch } from '@reduxjs/toolkit';
 
 const App: React.FC<IUseCurrencyTableProp> = ({ rows, load }: IUseCurrencyTableProp) => {

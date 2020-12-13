@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import { Dispatch } from 'redux';
-import { load } from '../currency/currencySlice';
+import { load } from './currencyReducer';
 
 export const getCurrency = () => async (dispatch: Dispatch): Promise<void> => {
   const client = new ApolloClient({

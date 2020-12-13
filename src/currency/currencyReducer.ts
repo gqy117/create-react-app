@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IRow } from '../CurrencyTable';
+import { IRow } from './currencyTable';
 
 interface CurrencyState {
   rows: IRow[];

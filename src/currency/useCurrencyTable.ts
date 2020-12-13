@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { IRow } from '../CurrencyTable';
+import { IRow } from './currencyTable';
 
 export interface IUseCurrencyTableProp extends ILoadEvent {
   rows: IRow[];
