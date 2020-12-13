@@ -9,8 +9,8 @@ import { RootState } from './app/store';
 import { getCurrency } from './currency/currencyThunk';
 import { bindActionCreators, Dispatch } from '@reduxjs/toolkit';
 
-const App: React.FC<IUseCurrencyTableProp> = ({ rows, load }: IUseCurrencyTableProp) => {
-  useCurrencyTable({ load });
+const App: React.FC<IUseCurrencyTableProp> = ({ rows, getCurrency }: IUseCurrencyTableProp) => {
+  useCurrencyTable({ getCurrency });
 
   return (
     <div className="App">
@@ -30,7 +30,7 @@ const mapStateToProps = (state: RootState) => {
 };
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
-  return { ...bindActionCreators({ load: getCurrency }, dispatch) };
+  return { ...bindActionCreators({ getCurrency }, dispatch) };
 };
 
 const connectedApp = connect(mapStateToProps, mapDispatchToProps)(App);

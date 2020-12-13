@@ -6,12 +6,12 @@ export interface IUseCurrencyTableProp extends ILoadEvent {
 }
 
 interface ILoadEvent {
-  load: () => void;
+  getCurrency: () => void;
 }
 
-const useCurrencyTable = ({ load }: ILoadEvent): void => {
+const useCurrencyTable = ({ getCurrency }: ILoadEvent): void => {
   useEffect(() => {
-    (async () => await load())();
+    (async () => await getCurrency())();
   }, []);
 };
 
